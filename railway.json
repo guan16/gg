@@ -1,9 +1,15 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pip install -r requirements.txt"
-  },
-  "deploy": {
-    "startCommand": "python main.py"
+    "nixpacksConfig": {
+      "phases": {
+        "setup": {
+          "nixPkgs": ["python311", "git"]
+        }
+      },
+      "start": {
+        "cmd": "python main.py"
+      }
+    }
   }
 }
