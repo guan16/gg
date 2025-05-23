@@ -1,0 +1,6 @@
+discord.py
+openai
+yfinance
+matplotlib
+flask
+nest_asyncio
